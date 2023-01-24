@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Cor */
+    --bg-body: linear-gradient(180deg,#f7f7f7, #d8d8c8);
+    --bg-botao: #d8d8c8;
+
+    --branco: #fff;
+
+    --color-sublinhado: #000;
+    --color-texto: #000;
+
+    /* Img */
+    --label-icon: url("../assets/img/lua.png");
+}
+
+body {
+    background: var(--bg-body);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: .3125rem;
+}
+
+.titulo {
+    color: var(--color-texto);
+    text-align: center;
+}
+
+.titulo__sublinhado {
+    background: var(--color-sublinhado);
+    font-weight: 700;
+
+    height: .1875rem;
+
+    margin-bottom: .625rem;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game__botao {
+    background: var(--bg-botao);
+    border-color: var(--branco);
+
+    cursor: pointer;
+    
+    font-size: 3.125rem;
+
+    margin: .3125rem;
+
+    height: 100px;
+    width: 6.25rem;
+}
+
+.jogadorDaVez {
+    color: var(--color-texto);
+}
+
+/* Dark Mode */
+
+#btn {
+    display: none;
+}
+
+.mudar-tema {
+    background: var(--label-icon);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    padding: 67px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.dark-mode {
+    --bg-body: linear-gradient(180deg, rgb(150, 150, 150), #575555);
+    --bg-botao: var(--branco);
+    --color-sublinhado: var(--branco);
+    --color-texto: var(--branco);
+}
